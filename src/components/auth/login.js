@@ -37,7 +37,7 @@ const Login = () => {
   }, []);
   return (
     <div className="contenedor-signIn">
-      <form>
+      <form className="form">
         <h2 className="nombre-sign pt-4">Login</h2>
 
         <div className="form-group pt-2 pl-4 pr-4">

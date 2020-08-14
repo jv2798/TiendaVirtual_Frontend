@@ -141,113 +141,116 @@ const DetalleCamisa = () => {
   };
 
   return (
-    <div className="contenedor-padre-detalle container">
-      <div className="row">
-        <div className="col-xs-12 col-lg-6 text-center">
-          <img className="img-detalle img-fluid" src={imgD} alt="imagen" />
-        </div>
-        <div className="col-xs-12 col-lg-6 mt-5">
-          <label className="detalle-c">Precio:</label>{" "}
-          <span className="detalle-cm">C${precio} </span> <br />
-          <label className="detalle-c">Color: </label>{" "}
-          <span className="detalle-cm">{color} </span>
-          <br />
-          <ul className=" tallas-detalle nav nav-tabs">
-            <li className="nav-item">
-              <span className="nav-link primer">Talla: </span>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#S"
-                className={`nav-link ${activo1}`}
-                name="S"
-                onClick={AñdirTalla}
-              >
-                S
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#M"
-                className={`nav-link ${activo2}`}
-                name="M"
-                onClick={AñdirTalla}
-              >
-                M
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#L"
-                className={`nav-link ${activo3}`}
-                name="L"
-                onClick={AñdirTalla}
-              >
-                L
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#XL"
-                className={`nav-link ${activo4}`}
-                name="XL"
-                onClick={AñdirTalla}
-              >
-                XL
-              </a>
-            </li>
-          </ul>
-          <div className="row container detallito">
-            <div className="col-xs-12">
-              <div className="input-group mt-3">
-                <div className="input-group-prepend">
+    <>
+      <h1 className="carrito-nombre pt-4">Detalle Camisa</h1>
+      <div className="contenedor-padre-detalle container">
+        <div className="row">
+          <div className="col-xs-12 col-lg-6 text-center">
+            <img className="img-detalle img-fluid" src={imgD} alt="imagen" />
+          </div>
+          <div className="col-xs-12 col-lg-6 mt-5">
+            <label className="detalle-c">Precio:</label>{" "}
+            <span className="detalle-cm">C${precio} </span> <br />
+            <label className="detalle-c">Color: </label>{" "}
+            <span className="detalle-cm">{color} </span>
+            <br />
+            <ul className=" tallas-detalle nav nav-tabs">
+              <li className="nav-item">
+                <span className="nav-link primer">Talla: </span>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="#S"
+                  className={`nav-link ${activo1}`}
+                  name="S"
+                  onClick={AñdirTalla}
+                >
+                  S
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="#M"
+                  className={`nav-link ${activo2}`}
+                  name="M"
+                  onClick={AñdirTalla}
+                >
+                  M
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="#L"
+                  className={`nav-link ${activo3}`}
+                  name="L"
+                  onClick={AñdirTalla}
+                >
+                  L
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="#XL"
+                  className={`nav-link ${activo4}`}
+                  name="XL"
+                  onClick={AñdirTalla}
+                >
+                  XL
+                </a>
+              </li>
+            </ul>
+            <div className="row container detallito">
+              <div className="col-xs-12">
+                <div className="input-group mt-3">
+                  <div className="input-group-prepend">
+                    <input
+                      className="btn btn-outline-primary"
+                      type="button"
+                      value="-"
+                      name="restar"
+                      onClick={Decrementar}
+                    />
+                  </div>
                   <input
-                    className="btn btn-outline-primary"
-                    type="button"
-                    value="-"
-                    name="restar"
-                    onClick={Decrementar}
+                    className=" input-cantidad form-control"
+                    type="text"
+                    name="cantidad"
+                    placeholder="0"
+                    value={cantidad}
+                    onChange={OnChange}
                   />
-                </div>
-                <input
-                  className=" input-cantidad form-control"
-                  type="text"
-                  name="cantidad"
-                  placeholder="0"
-                  value={cantidad}
-                  onChange={OnChange}
-                />
-                <div className="input-group-append mr-2">
-                  <input
-                    name="sumar"
-                    className="btn btn-outline-primary "
-                    type="button"
-                    value="+"
-                    onClick={Incrementar}
-                  />
+                  <div className="input-group-append mr-2">
+                    <input
+                      name="sumar"
+                      className="btn btn-outline-primary "
+                      type="button"
+                      value="+"
+                      onClick={Incrementar}
+                    />
+                  </div>
                 </div>
               </div>
+              <div className="col-xs-12">
+                <input
+                  type="button"
+                  value="Agregar"
+                  onClick={Añadir}
+                  className="añadir-cart"
+                />
+              </div>
             </div>
-            <div className="col-xs-12">
-              <input
-                type="button"
-                value="Agregar"
-                onClick={Añadir}
-                className="añadir-cart"
-              />
-            </div>
+            {alerta ? (
+              <div
+                className={`mr-4 mt-3 w-50 text-center alert ${alerta.categoria}`}
+                role="alert"
+              >
+                {alerta.msg}
+              </div>
+            ) : null}
           </div>
-          {alerta ? (
-            <div
-              className={`mr-4 mt-3 w-50 text-center alert ${alerta.categoria}`}
-              role="alert"
-            >
-              {alerta.msg}
-            </div>
-          ) : null}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

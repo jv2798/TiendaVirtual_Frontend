@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import logo from "../img/logo4.png";
 import carrito from "../img/shopping-cart.png";
 import menu from "../img/ui.png";
-import { MDBNavbar } from "mdbreact";
+
 import { Link } from "react-router-dom";
 import CamisaContext from "../context/Camisas/camisaContext";
 import ubicacionContext from "../context/ubicacion/ubicacionContext";
@@ -42,7 +42,7 @@ const Header = () => {
   }, [camisas]);
 
   return (
-    <MDBNavbar className="navbar" bg="dark" fixed="top" expand="lg" scrolling>
+    <nav className="navbar fixed-top navbar-expand-lg">
       <a className="navbar-brand" href="/#">
         <img className=" logo" src={logo} alt="Logo" />
       </a>
@@ -97,7 +97,7 @@ const Header = () => {
               to={"/login"}
               name="iniciar"
             >
-              Sign In
+              Iniciar Sesión
             </Link>
           </li>
           <li className="nav-item">
@@ -106,13 +106,13 @@ const Header = () => {
               to={"/cuentanueva"}
               name="registrarse"
             >
-              Sign Up
+              Registrarse
             </Link>
           </li>
 
-          <li className="nav-item">
+          <li className="nav-item" hidden>
             <a className="nav-link" href="/#" name="salir">
-              Log Out
+              Cerrar Sesión
             </a>
           </li>
 
@@ -128,7 +128,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </MDBNavbar>
+    </nav>
   );
 };
 

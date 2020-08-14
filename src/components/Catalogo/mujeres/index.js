@@ -25,6 +25,7 @@ const Index = () => {
 
   return (
     <div className="container-fluid contenedor-padre-camisas">
+      <h1 className="carrito-nombre pt-4 pb-4">Lista de Estilos</h1>
       <div className="row lista-camisas-men ">
         {listado
           ? listado.map((camisas) => (
