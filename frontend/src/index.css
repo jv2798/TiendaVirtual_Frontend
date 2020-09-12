@@ -1,0 +1,762 @@
+/*html {
+  min-height: calc(100vh - 80px - 230px);
+  position: relative;
+  background-color: red;
+}*/
+
+/*navegacion
+.navbar {
+  transition-delay: 2s;
+  transition: all 2s ease;
+  box-shadow: 3px 5px 7px black;
+  background-color: black;
+  width: 100%;
+}
+
+
+
+
+.show ul li a {
+  animation-duration: 2s;
+  animation-name: slideinA;
+}
+
+@keyframes slideinA {
+  0% {
+    visibility: hidden;
+    margin-top: -100px;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: visible;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.top-nav-collapse {
+  transition-delay: 2s;
+  transition: all 2s ease;
+  opacity: 100%;
+}*/
+.father {
+  background-color: #101113;
+  min-height: calc(100vh - 231px);
+}
+
+/*Navegacion*/
+.link-activo {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+header {
+  width: 100%;
+  background-color: black;
+  box-shadow: 3px 5px 7px black;
+}
+
+header label {
+  display: none;
+  padding: 15px 20px;
+  padding-bottom: 0;
+}
+header label:hover {
+  cursor: pointer;
+}
+
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  font-family: "Lato", sans-serif;
+}
+
+.navitem {
+  display: flex;
+  align-items: center;
+}
+.navitem:hover > .navlink {
+  color: grey;
+  text-decoration: none;
+}
+.navlink {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.ul2 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navcarrito {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+}
+
+#btn-menu {
+  display: none;
+}
+@media (max-width: 800px) {
+  header {
+    height: 60px;
+  }
+  header label {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu {
+    position: absolute;
+    background-color: black;
+    width: 70%;
+
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .ul2 {
+    flex-direction: column;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+}
+
+/*INICIO*/
+.cl {
+  margin-bottom: 20px;
+}
+
+.frase {
+  font-family: "Krona One", sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+.fondo {
+  width: 100%;
+}
+
+.pedido {
+  font-family: "Krona One", sans-serif;
+  background-color: white;
+  color: #4290fc;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 14px;
+  border: 2px solid #4290fc;
+  box-shadow: 6px 6px 0 #4290fc;
+  margin-top: 50px;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.pedido2 {
+  font-family: "Krona One", sans-serif;
+  background-color: white;
+  color: #4290fc;
+  border-radius: 5px;
+
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #4290fc;
+  box-shadow: 6px 6px 0 #4290fc;
+  margin-top: 50px;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.pedido:hover,
+.pedido2:hover {
+  background-color: #4290fc;
+  color: white;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.contenedor-padre {
+  background-color: #101113;
+  padding: 20px;
+  color: white;
+}
+
+.contenedor-hijo {
+  background: url("./img/bg.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+
+  padding-top: 100px;
+}
+
+/*Nosotros*/
+
+.link-contacto:hover {
+  text-decoration: none;
+  color: #4290fc;
+}
+.nosotros-nombre {
+  font-family: "Anton", sans-serif;
+}
+
+.nosotros-subnombre {
+  font-family: "Anton", sans-serif;
+  margin-top: 40px;
+}
+
+hr {
+  width: 60%;
+
+  background-color: #e8e8e8;
+}
+.nosotros-frase {
+  margin-top: 40px;
+  font-family: "Krona One", sans-serif;
+}
+
+.contenedor-frase {
+  margin-bottom: 30px;
+}
+
+.encabezado {
+  border-bottom: 2px solid #4290fc;
+}
+
+.encabezado th {
+  color: #4290fc;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+th,
+td {
+  color: white;
+}
+
+.show {
+  transition-delay: 3s;
+  transition: all 2s ease;
+}
+
+/*Contacto*/
+.contenedor-contacto {
+  height: 800px;
+  background-color: #101113;
+  padding: 15px;
+}
+
+.contenedor-contacto form {
+  width: 400px;
+  height: 100%;
+  padding: 15px;
+
+  border-radius: 10px;
+  border: 0.5px solid rgb(197, 197, 197);
+  background-color: white;
+}
+
+.contenedor-form {
+  padding-top: 110px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nombre-contacto {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Krona One", sans-serif;
+}
+
+.atributo {
+  font-family: cursive;
+}
+
+.contenedor-contacto-hijo {
+  background: url("./img/bg.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+  height: 800px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.contador {
+  display: flex;
+  justify-content: flex-end;
+  color: #c2c2c2;
+}
+
+/*Nueva cuentra*/
+.contenedor-signup {
+  min-height: calc(100vh - 230px);
+  background-color: #111010;
+  display: flex;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  padding: 110px 20px 50px 20px;
+}
+
+.nombre-sign {
+  text-align: center;
+  font-family: "Krona One", sans-serif;
+  font-size: 25px;
+}
+.w-button {
+  width: 225px;
+  height: 50px;
+}
+
+.contenedor-signup form {
+  height: 100%;
+  width: 500px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/*Login*/
+.contenedor-signIn form {
+  height: 100%;
+  width: 450px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.contenedor-signIn {
+  min-height: calc(100vh - 230px);
+  padding: 145px 20px 70px 20px;
+  background-color: #111010;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: #868686;
+}
+
+.link:hover {
+  color: #4290fc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/**camisas men*/
+
+.contenedor-padre-camisas {
+  background-color: #101113;
+}
+.lista-camisas-men {
+  padding-top: 30px;
+}
+
+.img-men {
+  width: 100%;
+}
+
+.card-camisas {
+  margin: auto;
+
+  border: 2px solid #101113 !important;
+  width: 18rem;
+  overflow: hidden;
+}
+
+.card-body {
+  background-color: #101113;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.ocultar {
+  text-align: center;
+  padding: 5px;
+  background-color: black;
+  transform: translateY(-162%);
+  position: relative;
+  left: 100%;
+  transition: all 1s ease-in-out;
+}
+
+.ocultar-pequeños {
+  transform: translateY(-162%);
+  text-align: center;
+  padding: 5px;
+  background-color: black;
+}
+.cardText {
+  text-align: center;
+
+  color: white;
+}
+.card-camisas:hover > .card-body > .ocultar {
+  position: relative;
+  left: 0%;
+  /* animation-name: desplazar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;*/
+}
+
+.link-carrito {
+  color: white;
+}
+.link-carrito:hover {
+  transition: all 1s ease;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.ocultar:active,
+.ocultar-pequeños:active {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+}
+
+/*detalle*/
+
+.contenedor-padre-detalle {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.contenedor-detalles {
+  position: relative;
+  top: 150px;
+}
+.tallas-detalle {
+  border: none !important;
+}
+
+.primer {
+  border: none !important;
+  font-weight: bold;
+}
+.nav-link {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+}
+
+.detalle-c {
+  color: white;
+  font-weight: bold;
+  position: relative;
+  left: 15px;
+}
+
+.detalle-cm {
+  color: white;
+  position: relative;
+  left: 40px;
+  font-size: 16px;
+}
+.img-detalle {
+  width: 500px;
+}
+
+.nav-item a {
+  border-radius: 10px !important;
+  font-size: 16px;
+}
+.nav-link:hover {
+  color: white;
+}
+
+.input-cantidad {
+  width: 60px !important;
+  height: 30px !important;
+  text-align: center !important;
+  background-color: #101113 !important;
+  color: white !important;
+}
+
+.input-group-append,
+.input-group-prepend {
+  height: 30px !important;
+
+  text-align: center;
+}
+
+.input-group-append input,
+.input-group-prepend input {
+  color: white;
+  border: 1px solid white;
+  text-align: left;
+}
+.input-group {
+  position: relative;
+  left: 18px;
+}
+
+.añadir-cart {
+  font-family: "Krona One", sans-serif;
+  background-color: white;
+  color: #4290fc;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 12px;
+  border: 2px solid #4290fc;
+  box-shadow: 2px 2px 0 #4290fc;
+  position: relative;
+  margin-top: 14px;
+  left: 20px;
+  transition-delay: 0s;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.añadir-cart:hover {
+  background-color: #4290fc;
+  color: white;
+  box-shadow: none;
+}
+
+/*Carrito*/
+
+.contenedor-carrito {
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-carrito {
+  width: 70px;
+}
+
+.table-carrito {
+  margin-bottom: 0px !important;
+}
+.t {
+  margin-bottom: 10px !important;
+}
+.tr-carrito {
+  border-bottom: 2px solid #101113 !important;
+}
+
+.carrito-nombre {
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+.img-carrito-eliminar {
+  width: 20px;
+}
+.img-carrito-eliminar:hover {
+  cursor: pointer;
+}
+
+.realizar {
+  font-family: "Krona One", sans-serif;
+  background-color: white;
+  color: #4290fc;
+  border-radius: 5px;
+  height: 50px;
+  width: 480px;
+  font-size: 14px;
+  border: 2px solid #4290fc;
+  box-shadow: 6px 6px 0 #4290fc;
+  margin: 50px 0px 50px 0px;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.realizar:hover,
+.realizar2:hover {
+  background-color: #4290fc;
+  color: white;
+  box-shadow: none;
+}
+/*carrito v2*/
+
+.contenedor-carrito2 {
+  padding-top: 30px;
+}
+
+.div-carrito {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 250px;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.tipo {
+  font-family: "monserrat", sans-serif;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+}
+.cart-imagen {
+  text-align: center;
+}
+
+.cart-detalles {
+  font-family: "Krona One", sans-serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.total {
+  font-family: "Krona One", sans-serif;
+  border-bottom: 2px solid white !important;
+  width: 250px;
+}
+
+.total2 {
+  font-family: "Krona One", sans-serif;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.hr-total {
+  height: 2px;
+  border-radius: 10px;
+}
+.div-realizar-pedido {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.variacion-cantidad {
+  display: flex;
+  justify-content: center;
+}
+.realizar2 {
+  font-family: "Krona One", sans-serif;
+  background-color: white;
+  color: #4290fc;
+  border-radius: 5px;
+  height: 50px;
+  width: 300px;
+  font-size: 14px;
+  border: 2px solid #4290fc;
+  box-shadow: 6px 6px 0 #4290fc;
+  margin: 50px 0px 50px 0px;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.v2 {
+  height: 25px !important;
+
+  text-align: center;
+}
+
+.input-cantidad2 {
+  width: 40px !important;
+  height: 25px !important;
+  text-align: center !important;
+  background-color: #101113 !important;
+  color: white !important;
+}
+/*carrito vacio*/
+.img-carrito-vacio {
+  width: 200px;
+}
+
+.div-carrito-vacio {
+  padding-top: 120px;
+  height: 600px;
+  text-align: center;
+}
+
+.div-detalle-vacio {
+  color: white;
+  text-align: center;
+}
+
+.infor-vacio {
+  font-family: "monserrat", sans-serif;
+  width: 600px;
+}
+.div-info {
+  display: flex;
+  justify-content: center;
+}
+.titulo-vacio {
+  font-family: "Krona One", sans-serif;
+  font-size: 25px;
+}
+/*footer*/
+
+.img-footer {
+  margin-left: 15px;
+
+  color: white;
+}
+
+.footer-link {
+  height: 100px;
+}
+.footer-copyright {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #101113;
+  color: white;
+  height: 130px;
+}
+
+.contenedor-footer {
+  border-top: 1px solid #e8e8e8;
+  width: 100%;
+  height: 230px;
+
+  background-color: #101113;
+}
+
+.footer-link {
+  background-color: #101113;
+}
+
+footer {
+  height: 230px;
+}
